@@ -28,7 +28,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is Enemy:
 		area.damage()
 		queue_free()
-	if area is GDEnemy:
+	else:
 		area.damage()
 		queue_free()
 	

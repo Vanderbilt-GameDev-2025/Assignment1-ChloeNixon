@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var enemy_scene: Array[PackedScene] = []
 #possible enemy scenes that can spawn
 @export var enemy_scene_gd: Array[PackedScene] = []
 # parallax scroll speeds
@@ -58,23 +57,22 @@ func _process(delta: float) -> void:
 		foreground.scroll_offset.x = 0
 		
 
+# when bullet is shot, adds a bullet to the scene going right
 func _on_player_bullet_shot(bullet_scene, location):
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = location
 	bullet_container.add_child(bullet)
 	sound_bullet.play()
 
+# Spawns an enemy
 func _on_enemy_spawn_timer_timeout() -> void:
-	var enemy_spawn = enemy_scene.pick_random().instantiate()
-	enemy_spawn.global_position = Vector2(1860, randf_range(30, 780))
-	enemy_spawn.hit.connect(_on_enemy_hit)
-	enemy_spawn.killed.connect(_on_enemy_killed)
-	enemy_container.add_child(enemy_spawn)
-	
+	#Picks enemy from scene list at random
 	var enemy_spawn_gd = enemy_scene_gd.pick_random().instantiate()
+	# Positions enemy at start of screen at random y-coordinate
 	enemy_spawn_gd.global_position = Vector2(1860, randf_range(30, 780))
 	enemy_spawn_gd.hit_gd.connect(_on_enemy_hit)
 	enemy_spawn_gd.killed_gd.connect(_on_enemy_killed)
+	# Adds enemy to scene
 	enemy_container.add_child(enemy_spawn_gd)
 
 func _on_enemy_hit():

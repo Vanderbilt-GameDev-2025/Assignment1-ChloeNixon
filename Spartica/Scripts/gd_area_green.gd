@@ -11,14 +11,16 @@ signal hit_gd
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	cpp_node.hp = 2
+	cpp_node.amplitude = 10
+	cpp_node.points = 100
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # Enemy moves left at a constant rate of the speed
 func _process(delta: float) -> void:
 	time += delta
 	global_position.x -= cpp_node.speed * delta
-	global_position.y += (cpp_node.amplitude/30) * (sin(2 * time)) 
+	global_position.y += (cpp_node.amplitude/30) * (sin(6 * time)) 
 	#global_position.y += cpp_node.amplitude + (cpp_node.amplitude * cos(delta * 1.5))
 	
 # Deletes enemy when notifier exits the screen

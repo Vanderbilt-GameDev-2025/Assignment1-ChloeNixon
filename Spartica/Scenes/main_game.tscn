@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://dxx6k3sk1cfq2"]
 
 [ext_resource type="Script" path="res://Scripts/mainscript.gd" id="1_eakg3"]
-[ext_resource type="PackedScene" uid="uid://40peos8gveuw" path="res://Scenes/enemy.tscn" id="2_ni336"]
-[ext_resource type="PackedScene" uid="uid://6fekd4tfr5yr" path="res://Scenes/enemy_blue.tscn" id="3_n6wcs"]
+[ext_resource type="PackedScene" uid="uid://m3bygn8y7q84" path="res://Scenes/gd_enemy_blue.tscn" id="4_m0sqh"]
 [ext_resource type="AudioStream" uid="uid://dkscnv4j7qd06" path="res://assets/audio/laser_three.wav" id="4_u8we4"]
 [ext_resource type="AudioStream" uid="uid://ohqjnv5amcw6" path="res://assets/audio/laser.mp3" id="5_2r38o"]
+[ext_resource type="PackedScene" uid="uid://bifhmuluwx1p5" path="res://Scenes/gd_enemy_green.tscn" id="5_plpo5"]
 [ext_resource type="PackedScene" uid="uid://ce6nw2lbta406" path="res://Scenes/hud.tscn" id="7_6lsh7"]
 [ext_resource type="AudioStream" uid="uid://br4r4okbce5f7" path="res://assets/audio/enemy_death.wav" id="7_8kmxq"]
 [ext_resource type="PackedScene" uid="uid://cn3tbstedsutc" path="res://Scenes/game_over.tscn" id="8_4a6sa"]
@@ -33,8 +33,7 @@ hue_variation_max = 0.13
 
 [node name="Maingame" type="Node2D"]
 script = ExtResource("1_eakg3")
-enemy_scene = Array[PackedScene]([ExtResource("2_ni336"), ExtResource("3_n6wcs")])
-enemy_scene_gd = Array[PackedScene]([ExtResource("13_47dat")])
+enemy_scene_gd = Array[PackedScene]([ExtResource("13_47dat"), ExtResource("5_plpo5"), ExtResource("4_m0sqh")])
 
 [node name="SFX" type="Node" parent="."]
 
