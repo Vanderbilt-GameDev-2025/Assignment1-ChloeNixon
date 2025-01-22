@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/mainscript.gd" id="1_eakg3"]
 [ext_resource type="PackedScene" uid="uid://m3bygn8y7q84" path="res://Scenes/gd_enemy_blue.tscn" id="4_m0sqh"]
 [ext_resource type="AudioStream" uid="uid://dkscnv4j7qd06" path="res://assets/audio/laser_three.wav" id="4_u8we4"]
-[ext_resource type="AudioStream" uid="uid://ohqjnv5amcw6" path="res://assets/audio/laser.mp3" id="5_2r38o"]
 [ext_resource type="PackedScene" uid="uid://bifhmuluwx1p5" path="res://Scenes/gd_enemy_green.tscn" id="5_plpo5"]
+[ext_resource type="AudioStream" uid="uid://cq4fy2e7aonj2" path="res://assets/audio/enemy_hit.wav" id="6_yvqft"]
 [ext_resource type="PackedScene" uid="uid://ce6nw2lbta406" path="res://Scenes/hud.tscn" id="7_6lsh7"]
 [ext_resource type="AudioStream" uid="uid://br4r4okbce5f7" path="res://assets/audio/enemy_death.wav" id="7_8kmxq"]
 [ext_resource type="PackedScene" uid="uid://cn3tbstedsutc" path="res://Scenes/game_over.tscn" id="8_4a6sa"]
@@ -41,7 +41,7 @@ enemy_scene_gd = Array[PackedScene]([ExtResource("13_47dat"), ExtResource("5_plp
 stream = ExtResource("4_u8we4")
 
 [node name="enemy_hit" type="AudioStreamPlayer" parent="SFX"]
-stream = ExtResource("5_2r38o")
+stream = ExtResource("6_yvqft")
 
 [node name="enemy_killed" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("7_8kmxq")

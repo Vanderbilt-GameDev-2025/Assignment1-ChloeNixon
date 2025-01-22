@@ -25,10 +25,6 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 # When bullet enters enemy's 2d area, damages enemy & deletes bullet
 func _on_area_entered(area: Area2D) -> void:
-	if area is Enemy:
-		area.damage()
-		queue_free()
-	else:
-		area.damage()
-		queue_free()
+	area.damage()
+	queue_free()
 	

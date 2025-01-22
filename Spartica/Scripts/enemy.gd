@@ -1,4 +1,4 @@
-# behavior of all enemies
+# behavior of all enemies (currently not in use)
 class_name Enemy extends Area2D
 
 signal killed(points)
